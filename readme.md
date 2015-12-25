@@ -1,27 +1,37 @@
-## Laravel PHP Framework
+# laravel-minimum-tutorial
+[ING]Laravel5.1でCRUDアプリケーションを作成する簡易チュートリアル
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Laravel5.1で最小限の機能＆MVCパターンで作るアプリケーションを作成することで、ざっくりとLaravel5.1での開発概要を掴んで頂く為のミニマムチュートリアルのサンプルになります。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+このサンプルに関するチュートリアルの詳細な内容に関しては下記になります。
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+■ Laravelの環境設定＆開発体験自作Laravel5.1ミニマムチュートリアルまとめ
+(Qiita) http://qiita.com/fumiyasac@github/items/78a335880f7abb1de8bf
 
-## Official Documentation
+__■ Screen Captureその1（一覧画面）:__
+![一覧画面](https://qiita-image-store.s3.amazonaws.com/0/17400/28527040-cd22-8bfe-8666-c221b83bc2e4.png)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+__■ Screen Captureその2（詳細画面）:__
+![詳細画面](https://qiita-image-store.s3.amazonaws.com/0/17400/42d7853c-243e-a56e-b947-ca7bf36648d6.png)
 
-## Contributing
+__■ Screen Captureその3（データ入力画面）:__
+![データ入力画面](https://qiita-image-store.s3.amazonaws.com/0/17400/a0f5f6e6-6484-b96a-bf33-491637917eef.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+__■ Screen Captureその4（データ編集画面）:__
+![データ編集画面](https://qiita-image-store.s3.amazonaws.com/0/17400/9e63c98d-4545-0775-ac43-8ea8ce42d9f2.png)
 
-## Security Vulnerabilities
+本サンプルの具体的な機能やねらいとしては、
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
++ Laravel5.1でのCRUD処理を作成と理解
++ Formに関するヘルパー機能と画像アップロードに関するライブラリの活用と理解
++ Routing, View, Model, Controllerの基本的な実装体験と概要理解
++ 実際のサンプルを通してのMVCパターンでの開発体験と概要理解
++ Laravelで開発する際に用いるartisanコマンドを用いた開発体験と概要理解
++ Composerを用いたパッケージ管理に関する概要理解
 
-### License
+になります。
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+※こちらのサンプルはMAMP(バージョン3.4)で動かすことを想定して作られたチュートリアルになります（2015.12.26時点の最新バージョン3.5ですが問題ないかと思います。）
+
+お持ちでない方は下記のリンクよりご自分のMacへインストールして見てください。
+MAMPのダウンロード：https://www.mamp.info/en/downloads/
