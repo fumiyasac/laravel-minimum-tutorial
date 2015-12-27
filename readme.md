@@ -35,4 +35,7 @@ __■ Screen Captureその4（データ編集画面）:__
 
 お持ちでない方は下記のリンクよりご自分のMacへインストールして見てください。
 
-MAMPのダウンロード：https://www.mamp.info/en/downloads/
+すでにデータが入った状態を再現したい方は、このリポジトリをクローン or ZIPファイルを解凍のあと `christmas_menu.sql` をMAMPのMySQLで実行してください。
+
+MAMPのダウンロード：
+https://www.mamp.info/en/downloads/
