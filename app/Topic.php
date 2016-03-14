@@ -29,7 +29,11 @@ class Topic extends Model implements StaplerableInterface {
       //格納ディレクトリ(public配下からのパス)
       'url' => '/uploads/topics/:id/:style/:filename'
 
-      /* JFYI：S3を使用する際の設定のテンプレート的なもの（まだ未検証）
+      /* JFYI：S3を使用する際の設定のテンプレート的なもの
+	      (注意事項)
+	      [その1: configファイル] config/laravel-stapler/s3.phpにAWS S3の設定を記載 ※'storage' => 's3'を設定してあげる
+	      [その2: s3内のパス設定] 'path' => '/uploads/topics/:id/:style/:filename'
+	      
       's3_client_config' => [
         'key' => 'xxxx',
         'secret' => 'xxxx',
