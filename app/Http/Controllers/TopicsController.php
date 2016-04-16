@@ -37,6 +37,7 @@ class TopicsController extends Controller
     $this->validate($request, [
       'title' => 'required|min:3', //最低3文字以上
       'body' => 'required',
+      'eyecatch' => 'image|max:2000',
       'published' => 'required|date',
     ]);
     
@@ -66,6 +67,7 @@ class TopicsController extends Controller
     $this->validate($request, [
       'title' => 'required|min:3', //最低3文字以上
       'body' => 'required',
+      'eyecatch' => 'image|max:2000',
       'published' => 'required|date',
     ]);
 
