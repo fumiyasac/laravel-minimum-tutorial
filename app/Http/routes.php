@@ -23,17 +23,19 @@ Route::get('/', function () {
 //全トピック表示画面
 Route::get('/', 'TopicsController@index');
 
-//トピックの新規追加画面
-Route::get('/topics/add', 'TopicsController@add');
-Route::post('/topics/create', 'TopicsController@create');
-
 //任意idのトピック表示
 Route::get('/topics/{id}', 'TopicsController@show');
 
-//任意idのトピック編集
-Route::get('/topics/edit/{id}', 'TopicsController@edit');
-Route::post('/topics/update/{id}', 'TopicsController@update');
+Route::group(['middleware' => 'auth.very_basic', 'prefix' => ''], function() {
 
-//任意idのトピック削除
-Route::post('/topics/delete', 'TopicsController@delete');
+    //トピックの新規追加画面
+    Route::get('/topics/add', 'TopicsController@add');
+    Route::post('/topics/create', 'TopicsController@create');
 
+    //任意idのトピック編集
+    Route::get('/topics/edit/{id}', 'TopicsController@edit');
+    Route::post('/topics/update/{id}', 'TopicsController@update');
+
+    //任意idのトピック削除
+    Route::post('/topics/delete', 'TopicsController@delete');
+});

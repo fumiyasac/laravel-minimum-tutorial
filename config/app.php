@@ -138,6 +138,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Codesleeve\LaravelStapler\Providers\L5ServiceProvider::class,
+        Olssonm\VeryBasicAuth\VeryBasicAuthServiceProvider::class,
 
         /*
          * Application Service Providers...

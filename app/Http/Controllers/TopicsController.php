@@ -13,7 +13,7 @@ class TopicsController extends Controller
 {
   //一覧
   public function index() {
-    
+
     //Topicsテーブルのデータをすべて取得する
     $topics = Topic::all();
     return view('topics.index', compact('topics'));
@@ -40,10 +40,10 @@ class TopicsController extends Controller
       'eyecatch' => 'image|max:2000',
       'published' => 'required|date',
     ]);
-    
+
     //新規データ1件登録
     Topic::create($request->all());
-    
+
     //一覧画面へリダイレクト
     \Session::flash('flash_message', 'Topic successfully added!');
     return redirect('/');
@@ -51,14 +51,14 @@ class TopicsController extends Controller
 
   //編集
   public function edit($id) {
-    
+
     //$idに該当するデータを1件取得する
     $topic = Topic::findOrFail($id);
     return view('topics.edit', compact('topic'));
   }
-  
+
   public function update($id, Request $request) {
-    
+
     //$idに該当するデータを1件取得する
     $topic = Topic::findOrFail($id);
 
@@ -73,7 +73,7 @@ class TopicsController extends Controller
 
     //既存データ1件更新
     $topic->fill($request->all())->save();
-    
+
     //一覧画面へリダイレクト
     \Session::flash('flash_message', 'Topic successfully edited!');
     return redirect('/');
@@ -81,26 +81,26 @@ class TopicsController extends Controller
 
   //削除
   public function delete(Request $request) {
-    
+
     //削除対象の$idを取得する
     $target_id = $request->id;
-    
+
     //$idの形式が正しいかのチェック（注意：この部分は実際に使う場合はより厳密なチェックが必要）
     if ($target_id && is_numeric($target_id)) {
-      
+
       //既存データ1件削除
       $topic = Topic::findOrFail($target_id);
       $topic->delete();
-      
+
       //削除成功時のメッセージを表示
       \Session::flash('flash_message', 'Topic successfully deleted!');
-            
+
     } else {
-    
+
       //削除失敗時のメッセージを表示
       \Session::flash('flash_message', 'Topic delete failed! Because something went wrong.');
     }
-    
+
     //一覧画面へリダイレクト
     return redirect('/');
   }
