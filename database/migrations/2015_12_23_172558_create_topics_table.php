@@ -20,11 +20,11 @@ class CreateTopicsTable extends Migration
             $table->text('body');
             $table->date('published');
             $table->timestamps();
-            //Add columns for Laravel Stapler 
+            //Add columns for Laravel Stapler
             $table->string('eyecatch_file_name', 256);
             $table->integer('eyecatch_file_size');
             $table->string('eyecatch_content_type', 256);
-            $table->timestamp('eyecatch_updated_at');
+            $table->timestamp('eyecatch_updated_at')->nullable();
 
             /*
               JFYI:laravel-stapler用のカラム追加
