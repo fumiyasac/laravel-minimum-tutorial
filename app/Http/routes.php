@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/', 'TopicsController@index');
 
 //任意idのトピック表示
-Route::get('/topics/{id}', 'TopicsController@show');
+Route::get('/topics/show/{id}', 'TopicsController@show');
 
 Route::group(['middleware' => 'auth.very_basic', 'prefix' => ''], function() {
 
